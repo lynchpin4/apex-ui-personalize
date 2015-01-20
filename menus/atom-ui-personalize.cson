@@ -1,24 +1,16 @@
-# See https://atom.io/docs/latest/creating-a-package#menus for more details
-'context-menu':
-  'atom-text-editor': [
-    {
-      'label': 'Toggle atom-ui-personalize'
-      'command': 'atom-ui-personalize:toggle'
-    }
-  ]
 'menu': [
   {
     'label': 'Packages'
     'submenu': [
-      'label': 'atom-ui-personalize'
+      'label': 'UI Customization'
       'submenu': [
         {
-          'label': 'Change Background'
-          'command': 'atom-ui-personalize:next-background'
+          'label': 'Change-up Background'
+          'command': 'ui-personalize:next-background'
         },
         {
-          'label': 'Toggle GUI'
-          'command': 'atom-ui-personalize:toggle'
+          'label': 'Toggle Editor'
+          'command': 'ui-personalize:toggle'
         }
       ]
     ]

@@ -17,8 +17,8 @@ module.exports = ApexUiPersonalize =
     @subscriptions = new CompositeDisposable
 
     # Register command that toggles this view
-    @subscriptions.add atom.commands.add 'atom-workspace', 'atom-ui-personalize:toggle': => @toggle()
-    @subscriptions.add atom.commands.add 'atom-workspace', 'atom-ui-personalize:next-background': => window.bg?.change()
+    @subscriptions.add atom.commands.add 'atom-workspace', 'ui-personalize:toggle': => @toggle()
+    @subscriptions.add atom.commands.add 'atom-workspace', 'ui-personalize:next-background': => window.bg?.change()
 
     window.ui_personalize = @
     if not required_bgswitcher
