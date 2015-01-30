@@ -11,6 +11,8 @@
   background-color: transparent;
 }
 
+.bgswitcher { background-size: cover!important; }
+
 .sf-menu { opacity: 1.0!important; font-family: 'Helvetica Neue', 'Droid Sans'; }
 .sf-menu * { color: lighten(@ui_color, 18%)!important; }
 .sf-menu ul > * { line-height: 14px; }
@@ -522,3 +524,74 @@ ul.background-message {
 .dg.main ul { opacity: 0.65;  -webkit-transition: opacity ease-out 0.9s; }
 .dg.main > *:hover, .dg ul:hover { opacity: 1; }
 .dg.hidden { display: none; }
+
+/* some more I made while testing w/ the styleguide.. */
+.bgswitcher { background-size: cover!important; }
+
+.tab-bar > *, .tab > *, .sf-menu *, .tree-view > *, atom-panel-container > *
+{
+  font-family: 'Segoe UI'!important;
+}
+
+.browser-toolbar input
+{
+  font-family: 'Segoe UI';
+}
+
+.browser-toolbar { margin:0px!important; }
+
+atom-pane-container atom-pane .item-views .pane-item {
+  color: #fefefe;
+  background-color: transparent;
+}
+
+.example .example-rendered
+{
+  background: transparent!important;
+}
+
+.example .example-code, .example .example-code pre
+{
+  background: rgba(0, 0, 0, 0.5)!important;
+}
+
+.select-list.popover-list
+{
+  background-color: transparent!important;
+}
+
+.list-group
+{
+  background: rgba(0, 0, 0, 0.8)!important;
+  color: #fff;
+}
+
+.tooltip {
+
+}
+
+.tooltip .tooltip-arrow {
+  border-top-color: rgba(56, 56, 56, 0.56)!important;
+  opacity: 0.1!important;
+}
+
+.tooltip-inner
+{
+  background-color: rgba(56, 56, 56, 0.77)!important;
+
+  color: #FFFFFF;
+  opacity: 0.9;
+  white-space: nowrap;
+  max-width: none;
+  border: 1px solid;
+  border-color: rgba(50,50,50, 0.60)!important;
+  color: #efefef!important;
+  font-weight: bold;
+}
+
+/* These shouldn't be neccessary.. */
+/* atom-workspace { top: 0px;  }
+
+atom-workspace, atom-panel {
+  margin-top: 25px;
+} */
