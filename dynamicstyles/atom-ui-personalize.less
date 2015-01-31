@@ -3,8 +3,6 @@
 // See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
 // for a full listing of what's available.
 
-
-
 /* better looking code */
 .editor .gutter, .editor
 {
@@ -46,13 +44,10 @@
 
 .workspace .browser-toolbar { background: transparent; }
 
-.omnibox-container * { color: @ui_color_use!important; font-family: 'Droid Sans', 'Helvetica Neue'; }
+.omnibox-container * { color: @ui_color_use!important; }
 
 
 atom-workspace, atom-panel, atom-panel.modal, .editor, .gutter, atom-panel-container, atom-workspace-axis, atom-pane, .terminal { background: transparent; }
-
-/*
-body > atom-panel, .panel, atom-panel.modal, atom-panel-container .tool-panel { background: #000!important; } */
 
 * { transition: color 0.9s ease-in; }
 
@@ -64,57 +59,6 @@ body > atom-panel, .panel, atom-panel.modal, atom-panel-container .tool-panel { 
 }
 
 atom-text-editor, .editor-contents { cursor: pointer!important; }
-/*
-/* light bgs v1
-@ui_keyword: gray;
-@ui_comment: darkorange;
-@ui_color: #ff6fe5;
-@ui_property: #d38139;
-@ui_spacer: #6c93bf;
-@ui_property: #00f03c;
-@ui_variable: lightgreen;
-
-/* safe light bg theme
-@ui_color: black;
-@ui_comment: white;
-@ui_property: #000;
-@ui_spacer: black;
-@ui_variable: black;
-@ui_keyword: white;
-
-
-/* dark v1
-@ui_keyword: lightgreen;
-@ui_color: pink;
-@ui_comment: brightgreen;
-@ui_property: cyan;
-@ui_color: darkorange;
-@ui_comment: white;
-@ui_spacer: white;
-@ui_variable: green; */
-/*
-@ui_keyword: rgb(105,92,73);
-@ui_color: rgb(112,94,86);
-@ui_comment: rgb(70,72,74);
-@ui_property: rgb(163,145,119);
-@ui_color: rgb(168,144,138);
-@ui_comment: rgb(120,115,113);
-@ui_spacer: rgb(41,37,33);
-@ui_variable: rgb(207,198,199); */
-
-
-/*
-@ui_color_use: darken(@ui_color, 20%);
-@ui_property_use: lighten(@ui_property, 10%);
-@ui_comment_use: lighten(saturate(@ui_comment, 80), 15);
-@ui_variable_use: saturate(lighten(@ui_variable, 25%), 100);
-@ui_comment_use: lighten(@ui_comment, 20%);
-@ui_keyword_use: lighten(@ui_keyword, 50%);
-@ui_spacer_use: darken(@ui_spacer, 20%);
-@ui_property_use: saturate(lighten(@ui_property, 15%), 25);
-@ui_spacer_use: saturate(@ui_property_use, 90%);
-@ui_property_two: lighten(saturate(@ui_primary, 40%), 10%);
-*/
 
 .gutter > * { color: alpha(@ui_color, 80%)!important; }
 
@@ -125,7 +69,9 @@ atom-text-editor, .editor-contents { cursor: pointer!important; }
   color: rgb(229, 229, 229)!important;
   -webkit-align-items: initial;
 }
+.editor, atom-text-editor, atom-text-editor::shadow {
 
+.punctuation, .spacer, .delimiter, .period, .period.method { }
 .source { color:@ui_primary!important; }
 
 .variable { color: @ui_variable_use!important; text-decoration: none; font-weight: bold!important; }
@@ -134,7 +80,7 @@ atom-text-editor, .editor-contents { cursor: pointer!important; }
 .comment { color: @ui_comment_use!important; font-weight: bold!important;  }
 
 .comment > span { color: @ui_comment_use!important; }
-.comment.block { color: @ui_comment_use!important; font-size: 12px; }
+.comment.block { color: @ui_comment_use!important; }
 
 .property-name { color: @ui_property_use!important; }
 .method { color: @ui_property_use!important; }
@@ -157,19 +103,15 @@ atom-text-editor, .editor-contents { cursor: pointer!important; }
 .meta.brace {
    font-weight: bolder!important; color: @ui_spacer_use!important;
 }
+.punctuation, .spacer, .delimiter, .period { color: @ui_spacer_use!important; }
 
+.constant { color: @ui_property_use!important; }
 
-.punctuation { color: @ui_spacer_use!important; ; }
-
-/*.editor .meta { color: @ui_property!important; } */
-
-.editor .constant { color: @ui_variable_use!important; }
-
+}
 
 /*
 * Pimpin' my atom shell.
 */
-
 
 .config-menu { background-color: transparent!important; }
 .settings-view { background-color: transparent!important; }
