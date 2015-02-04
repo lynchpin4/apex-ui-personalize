@@ -10,7 +10,7 @@ module.exports = ApexUiPersonalize =
     @state = state
     if not @state
       # customizer mode - settings
-      @state.on = false
+      @state.on = true
       @state.autoChange = false
 
     # Events subscribed to in atom's system can be easily cleaned up with a CompositeDisposable
