@@ -5,12 +5,20 @@ required_bgswitcher = false
 module.exports = ApexUiPersonalize =
   modalPanel: null
   subscriptions: null
+  
+  config:
+    bg_folder:
+      type: 'string'
+      default: "https://raw.githubusercontent.com/gstack/bars-backgrounds/master/"
+    list_url:
+      type: 'string'
+      default: 'https://raw.githubusercontent.com/gstack/bars-backgrounds/master/bgs.txt'
 
   activate: (state) ->
     @state = state
     if not @state
       # customizer mode - settings
-      @state.on = true
+      @state.on = no
       @state.autoChange = false
 
     # Events subscribed to in atom's system can be easily cleaned up with a CompositeDisposable
@@ -22,7 +30,14 @@ module.exports = ApexUiPersonalize =
 
     window.ui_personalize = @
     if not required_bgswitcher
-      require './bgswitcher'
+      require('./bgswitcher')((bg)=> 
+        @state.on = no
+        @toggle()
+      )
+    
+    setTimeout((=>
+      
+      console.log 'initial open'), 2000)
 
 
   deactivate: ->
@@ -33,10 +48,9 @@ module.exports = ApexUiPersonalize =
 
   toggle: ->
     @state.on = !@state.on
-
     if @state.on
       $('.dg').removeClass 'hidden'
-      if bg.gui then bg.gui.open()
+      if window.bg?.gui then bg?.gui?.open()
     else
       $('.dg').addClass 'hidden'
-      if bg.gui then bg.gui.close()
+      if window.bg?.gui then bg?.gui?.close()

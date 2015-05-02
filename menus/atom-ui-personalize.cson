@@ -2,10 +2,10 @@
   {
     'label': 'Packages'
     'submenu': [
-      'label': 'UI Customization'
+      'label': 'Personalize UI/Syntax'
       'submenu': [
         {
-          'label': 'Change-up Background'
+          'label': 'Switch Background'
           'command': 'ui-personalize:next-background'
         },
         {
