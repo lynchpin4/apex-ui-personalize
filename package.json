@@ -1,7 +1,7 @@
 {
   "name": "apex-ui-personalize",
   "main": "./lib/apex-ui-personalize",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Customize personalize and edit Atom's UI",
   "repository": "https://github.com/gstack/apex-ui-personalize",
   "license": "MIT",

@@ -1,0 +1,224 @@
+atom-workspace, .welcome {
+  background: @ui-background-color;
+  color: @ui-primary;
+}
+
+atom-panel, .tool-panel, .tree-view {
+  background: @ui-background-color;
+  color: @ui-primary;
+}
+
+atom-text-editor {
+  background-color: @syntax-background-color;
+  color: @syntax-text-color;
+
+  .invisible-character {
+    color: @syntax-invisible-character-color;
+  }
+
+  .indent-guide {
+    color: @syntax-indent-guide-color;
+  }
+
+  .wrap-guide {
+    background-color: @syntax-wrap-guide-color;
+  }
+
+  .gutter {
+    background-color: @syntax-gutter-background-color;
+  }
+
+  .line-number.cursor-line-no-selection {
+    background-color: @syntax-gutter-background-color-selected;
+  }
+
+  .invisible {
+    color: @syntax-text-color;
+  }
+
+  .cursor {
+    border-color: @syntax-cursor-color;
+  }
+
+  .selection .region {
+    background-color: @syntax-selection-color;
+  }
+
+  .search-results .syntax--marker .region {
+    background-color: transparent;
+    border: 1px solid @syntax-result-marker-color;
+  }
+
+  .search-results .syntax--marker.current-result .region {
+    border: 1px solid @syntax-result-marker-color-selected;
+  }
+
+  .syntax--gfm {
+    .syntax--markup {
+      &.syntax--heading {
+        color: @syntax-heading-color;
+        font-weight: bold;
+      }
+
+      &.syntax--underline {
+        color: @syntax-underline-color;
+        text-decoration: underline;
+      }
+    }
+
+    .syntax--bold {
+      font-weight: bold;
+    }
+
+    .syntax--italic {
+      font-style: italic;
+    }
+
+    .syntax--raw {
+      color: @syntax-raw;
+    }
+
+    .syntax--variable.syntax--list {
+      color: @syntax-variable;
+      font-weight: bold;
+    }
+
+    .syntax--link {
+      color: @syntax-link;
+
+      .syntax--entity {
+        color: @syntax-entity;
+      }
+    }
+  }
+}
+
+.syntax--comment {
+  color: @syntax-comment;
+}
+
+.syntax--constant {
+  &.syntax--character,
+  &.syntax--language,
+  &.syntax--numeric,
+  &.syntax--other {
+    color: @syntax-constant;
+  }
+}
+
+.syntax--entity {
+  &.syntax--name.syntax--class {
+    text-decoration: none;
+    color: @syntax-class;
+  }
+
+  &.syntax--name.syntax--function {
+    color: @syntax-function;
+  }
+
+  &.syntax--name.syntax--instance {
+    color: @syntax-instance;
+  }
+
+  &.syntax--name.syntax--tag {
+    color: @syntax-tag;
+  }
+
+  &.syntax--other.syntax--attribute-name {
+    color: @syntax-attribute-name;
+  }
+
+  &.syntax--other.syntax--inherited-class {
+    font-style: italic;
+    text-decoration: none;
+    color: @syntax-class;
+  }
+}
+
+.syntax--invalid {
+  color: @ghost-white;
+  background-color: @syntax-invalid;
+
+  &.syntax--deprecated {
+    background-color: @syntax-deprecated;
+  }
+}
+
+.syntax--keyword {
+  color: @syntax-keyword !important;
+}
+
+.syntax--meta.syntax--tag {
+  color: @syntax-text-color;
+}
+
+.syntax--storage {
+  color: @syntax-storage;
+
+  &.syntax--type {
+    font-style: italic;
+    color: @syntax-type;
+  }
+}
+
+.syntax--string {
+  color: @syntax-string;
+}
+
+.syntax--support {
+  &.syntax--constant,
+  &.syntax--function {
+    color: @syntax-constant;
+  }
+
+  &.syntax--class,
+  &.syntax--type {
+    font-style: italic;
+    color: @syntax-class;
+  }
+}
+
+.syntax--variable {
+  &.syntax--parameter {
+    font-style: italic;
+    color: @syntax-variable;
+  }
+
+  // 'self' Python
+  &.syntax--language.syntax--python,
+  // 'this' Javascript
+  &.syntax--language.syntax--js {
+    color: @syntax-class;
+  }
+}
+
+// Jade syntax
+.syntax--class.syntax--jade {
+  color: @syntax-string;
+}
+
+// Prevent underlines from making their way into whitespace elements
+.leading-whitespace,
+.trailing-whitespace {
+  display: inline-block;
+}
+
+.syntax--js {
+  .syntax--template {
+    .syntax--element {
+      .syntax--quasi.syntax--begin, .syntax--quasi.syntax--end {
+        color: @syntax-class;
+      }
+
+      .syntax--variable, .syntax--brace, .syntax--comma {
+        color: @syntax-text-color;
+      }
+    }
+  }
+}
+
+.syntax--json {
+  .syntax--dictionary:not(.syntax--value) > .syntax--quoted, .syntax--dictionary:not(.syntax--value) > .syntax--string > .syntax--punctuation {
+    color: #a6e22e;
+  }
+}
